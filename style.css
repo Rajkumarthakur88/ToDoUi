@@ -24,7 +24,7 @@
 
 /* NAVBAR */
 nav{
-     width: 15%;
+     width: 22%;
      margin-top: 25px;
      padding: 15px 5px;
      background-color: rgba(247, 247, 247, 0.623);
@@ -39,9 +39,8 @@ nav h1{
      font-weight: 600;
      color: #000;
 }
+
 /* Animation */
-
-
 @-webkit-keyframes AnimationName {
      0%{background-position:0% 50%}
      50%{background-position:100% 50%}
@@ -151,4 +150,20 @@ form input {
      color: #fff;
      padding: 2.5px 10px;
      font-size: 25px;
+}
+
+
+/* MOBILE VIEW */
+@media(max-width:768px) {
+     
+     nav{
+          width: 75%;
+     }
+     nav h1{
+          font-size: 30px;
+     }
+     .to-do-container{
+          width: 90%;
+     }
+
 }
