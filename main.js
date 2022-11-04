@@ -4,12 +4,16 @@ let ul = document.querySelector("ul");
 
 form.addEventListener("submit" ,Todolist);
 
+
+// ADD LI TO TODOLIST
+
 function Todolist(e) {
    e.preventDefault();
 const NewLi = document.createElement("li");
 NewLi.className = "to-do ";
 NewLi.innerText=input.value;
 
+// DELETE BTN
 let delBtn = document.createElement("button");
 delBtn.innerText = "x";
 delBtn.className = "cancel-btn";
@@ -17,28 +21,13 @@ NewLi.appendChild(delBtn);
 
 ul.appendChild(NewLi);
 
+// RESET FORM AFTER SUBMIT
 form.reset();
 }
 
 
 
-// ul.addEventListener("click", deleteTodo);
-
-// // delete todo
-
-// function deleteTodo(e){
-
-//    console.log(e.target.className);
-//   if(e.target.className.includes("cancel-btn")){
-//     const todo = e.target.parentElement;
-//     ul.removeChild(todo);
-//   }
-
-// }
-
-
-
-// //to delete the todo
+//To delete the todo
 
 ul.addEventListener("click", deleteTodo);
 
