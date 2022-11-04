@@ -1,9 +1,8 @@
-let form = document.querySelector("form");
+let form = document.querySelector(".todoform");
 let input = document.querySelector("input")
 let ul = document.querySelector("ul");
 
-
-form.addEventListener("submit", Todolist);
+form.addEventListener("submit" ,Todolist);
 
 function Todolist(e) {
    e.preventDefault();
@@ -22,33 +21,33 @@ form.reset();
 }
 
 
-// let form = document.querySelector("form");
-// let input = document.querySelector("input");
-// let ul = document.querySelector("ul");
 
-// // Save todo
-// form.addEventListener("submit", saveTodo);
+// ul.addEventListener("click", deleteTodo);
 
-// function saveTodo(e) {
-//   // Prevents from reloading page
+// // delete todo
 
-//   e.preventDefault();
+// function deleteTodo(e){
 
-//   // create li
-//   const newLi = document.createElement("li");
-// //   newLi.className = "list-group-item rounded-0";
-//   newLi.innerText = input.value;
+//    console.log(e.target.className);
+//   if(e.target.className.includes("cancel-btn")){
+//     const todo = e.target.parentElement;
+//     ul.removeChild(todo);
+//   }
 
-//   // create button
-
-// //   let delBtn = document.createElement("button");
-// //   delBtn.innerText = "Delete";
-// //   delBtn.className = "btn btn-danger btn-sm rounded-0 float-end";
-// //   newLi.appendChild(delBtn);
-
-//   // Insert New Li Into Ul
-//   ul.appendChild(newLi);
-
-//   // Reset Form
-//   form.reset();
 // }
+
+
+
+// //to delete the todo
+
+ul.addEventListener("click", deleteTodo);
+
+function deleteTodo(e){
+
+   if(e.target.className.includes("cancel-btn"))
+   {
+      const DelLi = e.target.parentElement;
+      ul.removeChild(DelLi);
+   }
+
+}
